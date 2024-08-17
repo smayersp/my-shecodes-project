@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: beige;
+      padding: 20px 80px 20px 80px;
+    }
+    h1 {
+      color: mediumpurple;
+      text-align: center;
+    }
+    h2 {
+      color: rgb(52, 4, 97);
+      text-align: center;
+    }
+    img {
+      margin: 0 auto;
+      padding: 25px;
+      display: block;
+      max-width: 80%;
+    }
+    button {
+      background: rgb(137, 114, 183);
+      color: beige;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 auto;
+      padding: 15px 30px;
+      border-radius: 20px;
+      box-shadow: 2px 3px 3px rgb(110, 110, 203);
+      border: 1px dotted plum;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: plum;
+      color: rgb(52, 4, 97);
+    }
+    .madeBy {
+      text-align: center;
+      margin: 25px 30px;
+    }
+    .container {
+      background: linear-gradient(
+        179.1deg,
+        rgb(247, 238, 238) -1.9%,
+        rgb(247, 202, 201) 44.9%,
+        rgb(145, 168, 208) 96.1%
+      );
+      padding: 20px 80px 20px 80px;
+      border-radius: 30px;
+    }
+    .description {
+      text-align: left;
+      color: rgb(52, 4, 97);
+      line-height: 1.5;
+      margin: 0 auto;
+    }
+    .hanami {
+      color: rgb(115, 22, 208);
+    }
+    .learnMore {
+      text-decoration: none;
+      color: rgb(52, 4, 97);
+    }
+    .learnMore:hover {
+      color: lavender;
+      transition: all 200ms ease-in-out;
+    }
+    .Coder {
+      color: rgb(52, 4, 97);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>The Sakura Experience</h1>
+      <h2>🌸 Most popular reason to visit Japan in the Spring 🌸</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/126/166/original/Screenshot_2024-05-11_at_8.06.52%E2%80%AFPM.png?1715472435"
+        alt="mountfujisakura"
+        width="500"
+      />
+      <p class="description">
+        In Japan, cherry blossoms, or <em> sakura</em>, symbolize the ephemeral
+        beauty of life and are deeply ingrained in the nation's cultural fabric.
+        <span class="hanami"
+          >Every spring, these delicate pink and white flowers blanket the
+          country in a breathtaking display known as "hanami," or flower
+          viewing.</span
+        ><br />
+        People from all walks of life gather under the blossoms in parks,
+        gardens, and along riverbanks to picnic, socialize, and appreciate the
+        fleeting splendor of the blooms. This tradition, rooted in centuries of
+        Japanese history, fosters a sense of togetherness and gratitude for the
+        transient nature of existence, reminding us to
+        <strong>each passing moment.</strong>
+      </p>
+      <p>
+        <a
+          href="https://www.jal.co.jp/in/en/guide-to-japan/experiences/cherry-blossom/cherry-blossom-festivals/index.html"
+          target="_blank"
+          class="learnMore"
+          >Learn More</a
+        >
+      </p>
+      <button>Sign up</button>
+      <div class="madeBy">
+        Coded by <span class="Coder">Shaira Mayers</span>
+      </div>
+    </div>
+    <script>
+      function signUp() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let age = prompt("What is your age?");
+        if (age >= 18) {
+          heading2.innerHTML = `Thanks for signing up ${name}! We'll contact you shortly at ${email}`;
+        } else {
+          alert("Sorry, you must be over 18 to sign up " + name);
+        }
+      }
+      let sign = document.querySelector("button");
+      sign.addEventListener("click", signUp);
+      let heading2 = document.querySelector("h2");
+    </script>
+  </body>
+</html>
